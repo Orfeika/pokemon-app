@@ -7,3 +7,11 @@ export const getPokemons = () => {
     console.error(error);
   }
 };
+
+export const getPokemon = url => {
+  try {
+    return axios.get(url);
+  } catch (error) {
+    console.error(error);
+  }
+};
