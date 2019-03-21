@@ -1,8 +1,8 @@
 import React from "react";
-import * as api from "../api";
+import * as api from "../../api";
 import Pokemon from "./Pokemon";
-import { pokemonList } from "./defaultData";
-import SearchBar from "./SearchBar";
+import { pokemonList } from "../defaultData";
+import SearchBar from "../common/SearchBar";
 
 class PokemonPage extends React.Component {
   state = {
