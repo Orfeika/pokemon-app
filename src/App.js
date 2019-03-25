@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
 import { Route, Switch } from "react-router-dom";
 import PokemonsPage from "./components/pokemon/PokemonsPage";
 import Header from "./components/common/Header";
@@ -11,9 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <Header />
-        </header>
+        <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/about" component={AboutPage} />

@@ -1,6 +1,7 @@
 import React from "react";
 import * as api from "../../api";
 import PropTypes from "prop-types";
+
 class Pokemon extends React.Component {
   state = {
     pokemon: {
@@ -18,7 +19,6 @@ class Pokemon extends React.Component {
       .getPokemon(this.props.url)
       .then(res => {
         const pokemon = res.data;
-        console.log(pokemon);
         this.setState({
           pokemon,
           isLoaded: true,
@@ -39,18 +39,21 @@ class Pokemon extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <h2>{this.props.name}</h2>
-        <img
-          src={this.state.pokemon.sprites.front_default}
-          alt={this.props.name}
-          height="150"
-        />
-        <img
-          src={this.state.pokemon.sprites.back_default}
-          alt={this.props.name}
-          height="150"
-        />
+        <div className="img-container">
+          <img
+            src={this.state.pokemon.sprites.front_default}
+            alt={this.props.name}
+          />
+          <img
+            src={this.state.pokemon.sprites.back_default}
+            alt={this.props.name}
+          />
+        </div>
+        <div className="abilities-container">
+          <h1> Text </h1>
+        </div>
       </div>
     );
   }
