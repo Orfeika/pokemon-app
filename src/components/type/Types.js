@@ -16,7 +16,7 @@ Types.prototypes = {
 };
 
 const Type = props => {
-  return <div className="type">{props.name}</div>;
+  return <div className={props.name + " type"}>{props.name}</div>;
 };
 
 export default Types;

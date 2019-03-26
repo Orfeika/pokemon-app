@@ -16,7 +16,11 @@ Abilities.prototypes = {
 };
 
 const Ability = props => {
-  return <div className="ability">{props.name}</div>;
+  return <div className={props.name + " ability"}>{props.name}</div>;
+};
+
+Ability.prototypes = {
+  name: PropTypes.string.isRequired
 };
 
 export default Abilities;
