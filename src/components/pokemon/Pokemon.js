@@ -1,6 +1,8 @@
 import React from "react";
 import * as api from "../../api";
 import PropTypes from "prop-types";
+import Abilities from "../abilities/Abilities";
+import Types from "../type/Types";
 
 class Pokemon extends React.Component {
   state = {
@@ -8,7 +10,23 @@ class Pokemon extends React.Component {
       sprites: {
         back_default: null,
         font_default: null
-      }
+      },
+      types: [
+        {
+          type: {
+            name: null,
+            url: null
+          }
+        }
+      ],
+      abilities: [
+        {
+          ability: {
+            name: null,
+            url: null
+          }
+        }
+      ]
     },
     isLoaded: false,
     error: null
@@ -51,8 +69,9 @@ class Pokemon extends React.Component {
             alt={this.props.name}
           />
         </div>
-        <div className="abilities-container">
-          <h1> Text </h1>
+        <Types className="types" types={this.state.pokemon.types} />
+        <div className="abilities">
+          <Abilities abilities={this.state.pokemon.abilities} />
         </div>
       </div>
     );
