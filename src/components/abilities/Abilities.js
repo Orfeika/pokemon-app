@@ -5,12 +5,8 @@ const Abilities = props => {
   return (
     <div>
       <h3>Abilities:</h3>
-      {props.abilities.map((ability, index) => (
-        <Ability
-          url={ability.ability.url}
-          name={ability.ability.name}
-          key={index}
-        />
+      {props.abilities.map((item, index) => (
+        <Ability url={item.ability.url} name={item.ability.name} key={index} />
       ))}
     </div>
   );

@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 const Types = props => {
   return (
     <div>
-      <h3>Types:</h3>
-      {props.types.map((type, index) => (
-        <Type url={type.type.url} name={type.type.name} key={index} />
+      <h4>Types:</h4>
+      {props.types.map((item, index) => (
+        <Type url={item.type.url} name={item.type.name} key={index} />
       ))}
     </div>
   );
