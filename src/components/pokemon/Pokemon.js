@@ -58,16 +58,13 @@ class Pokemon extends React.Component {
   render() {
     return (
       <div className="container">
-        <h2>{this.props.name}</h2>
         <div className="img-container">
-          <img
-            src={this.state.pokemon.sprites.front_default}
-            alt={this.props.name}
-          />
-          <img
-            src={this.state.pokemon.sprites.back_default}
-            alt={this.props.name}
-          />
+          <a title={this.props.name}>
+            <img
+              src={this.state.pokemon.sprites.front_default}
+              alt={this.props.name}
+            />
+          </a>
         </div>
         <Types className="types" types={this.state.pokemon.types} />
         <div className="abilities">
