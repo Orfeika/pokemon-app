@@ -2,11 +2,12 @@
 
 .grid-container {
   font-family: "Shadows Into Light", cursive;
+
   margin: 1em;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-content: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100%;
   grid-gap: 1em;
 }
@@ -35,9 +36,12 @@
   -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  -webkit-transition: all 0.15s linear;
-  -moz-transition: all 0.15s linear;
-  transition: all 0.15s linear;
+  -webkit-transition: transform 0.15s linear, box-shadow 0.15s linear;
+
+  -moz-transition: transform 0.15s linear, box-shadow 0.15s linear;
+
+  transition: transform 0.15s linear, box-shadow 0.15s linear;
+
   z-index: 0;
   position: relative;
 }
@@ -60,12 +64,9 @@
 }
 
 .img-container a:hover {
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  transform: rotate(-5deg);
   z-index: 10;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
